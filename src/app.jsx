@@ -13,7 +13,7 @@ const todosList = [
   {
     id: 1,
     label: "Fix a layout, checkboxes should be listed in a column",
-    checked: false,
+    checked: true,
   },
   {
     id: 2,
