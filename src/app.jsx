@@ -2,14 +2,13 @@ import * as React from "react";
 import { TodoForm } from "./components/todo-form";
 import { TodoList } from "./components/todo-list";
 import { TodoResults } from "./components/todo-results";
-import { TodosContext } from "./todo-context";
 import "./index.scss";
 
 const todosList = [
   {
     id: 0,
     label: "Fix an ability to display all tasks",
-    checked: false,
+    checked: true,
   },
   {
     id: 1,
@@ -19,7 +18,7 @@ const todosList = [
   {
     id: 2,
     label: "Fix an ability to add a new task",
-    checked: false,
+    checked: true,
   },
   {
     id: 3,
@@ -43,11 +42,9 @@ export const App = () => {
 
   return (
     <div className="root">
-      <TodosContext.Provider value={ {todos} }>
-        <TodoList />
-        <TodoResults />
-        <TodoForm />
-      </TodosContext.Provider>
+        <TodoList todos={todos} />
+        <TodoResults todos={todos}  />
+        <TodoForm todos={todos} setTodos={setTodos} />
     </div>
   );
 };
