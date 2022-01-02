@@ -28,7 +28,7 @@ const todosList = [
   {
     id: 4,
     label: "Fix an ability to delete a task",
-    checked: false,
+    checked: true,
   },
   {
     id: 5,

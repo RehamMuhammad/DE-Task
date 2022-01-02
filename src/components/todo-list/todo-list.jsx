@@ -5,7 +5,7 @@ import './todo-list.scss';
 export const TodoList = ({todos, setTodos}) => {
 
   const handleDelete = (id) => {
-    // Fix an ability to delete task
+    setTodos(todos.filter((todo) => todo.id != id ));
   };
 
   const toggleCheck = (id) => {
