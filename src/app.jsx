@@ -23,7 +23,7 @@ const todosList = [
   {
     id: 3,
     label: "Fix an ability to toggle a task",
-    checked: false,
+    checked: true,
   },
   {
     id: 4,
@@ -42,7 +42,7 @@ export const App = () => {
 
   return (
     <div className="root">
-        <TodoList todos={todos} />
+        <TodoList todos={todos} setTodos={setTodos}/>
         <TodoResults todos={todos}  />
         <TodoForm todos={todos} setTodos={setTodos} />
     </div>
